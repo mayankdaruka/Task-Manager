@@ -122,7 +122,7 @@ class Container2 extends React.Component {
                 </div> 
                 <style> {"body { background-image: url('utnotepad2.jpg'); background-repeat: no-repeat; background-size: cover;}"} </style>
                 <div>
-                    <form onSubmit = {this.handleSubmit}>
+                    <form>
                         <label style = {{'fontSize': 20 + 'px', 'paddingLeft': 395 + 'px', 'paddingRight': 178 + 'px', fontFamily: 'Ink Free'}}> Task: </label>
                         <input style = {{padding: 5 + 'px', width: 200 + 'px'}} id = 'task' ref = 'someName1' onChange = {this.handleChangeTask} type = 'text' placeholder = 'Enter task'/>
                         <br />
@@ -134,7 +134,7 @@ class Container2 extends React.Component {
                         <br /> <br/>
 
                         <div style = {{'paddingLeft': 545 + 'px'}}>
-                            <button type = 'submit' value = "Submit" style = {{'padding': 10 + 'px', 'backgroundColor': '#F1A3F5', 'fontSize': 16 + 'px', fontFamily: 'Ink Free'}}> Submit </button>
+                            <button onClick = {this.handleSubmit} type = 'submit' value = "Submit" style = {{'padding': 10 + 'px', 'backgroundColor': '#F1A3F5', 'fontSize': 16 + 'px', fontFamily: 'Ink Free'}}> Submit </button>
                             <Link to = '/'>
                                 <button style = {{'padding': 10 + 'px', 'backgroundColor': '#55B695', 'fontSize': 16 + 'px', fontFamily: 'Ink Free'}}> Go Back </button>
                             </Link>
