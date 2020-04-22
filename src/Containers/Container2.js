@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-    Card, ListGroup
+    Card
   } from 'react-bootstrap';
 
 
@@ -22,7 +22,7 @@ class Container2 extends React.Component {
         this.handleChangeDate = this.handleChangeDate.bind(this)
         this.handleChangeImportance = this.handleChangeImportance.bind(this)
         this.handleChangeTask = this.handleChangeTask.bind(this)
-        // this.removeElement = this.removeElement.bind(this)
+        this.removeElement = this.removeElement.bind(this)
         this.handleTasks = this.handleTasks.bind(this)
         this.state = {
             task1: '',
@@ -49,9 +49,9 @@ class Container2 extends React.Component {
     }
 
     handleChangeImportance = (event) => {
-        if (event.target.value == 1 || event.target.value == 2) {
+        if (event.target.value === 1 || event.target.value === 2) {
             this.setState({importance1: 'not very important. '});
-        } else if (event.target.value == 3 || event.target.value == 4) {
+        } else if (event.target.value === 3 || event.target.value === 4) {
             this.setState({importance1: 'important. '});
         } else {
             this.setState({importance1: 'very important. '});

@@ -4,7 +4,7 @@ import Container2 from './Containers/Container2';
 import Container3 from './Containers/Container3';
 import Header from './Containers/header';
 import history from './Utils/history';
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 
 class Routes extends React.Component {
   render() {
