@@ -1,3 +1,6 @@
+This is a simple Task Manager application that I created using ReactJS to help me keep track of my daily tasks and notes. The database
+that I used for this was MongoDB Stitch, a serverless platform by MongoDB.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
