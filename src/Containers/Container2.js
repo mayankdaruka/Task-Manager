@@ -92,13 +92,13 @@ class Container2 extends React.Component {
     handleTasks = () => (
             <ul id = "listView">
             {this.state.todos.map((todo) => {
-                    return <li key = {todo.item}> 
+                    return <li key = {todo._id}> 
                     <Card style = {{'paddingLeft': 10 + 'px', 'paddingRight': 400 + 'px', 'backgroundColor': 'rgba(255,255,255,0.5)', 'fontFamily': 'Ink Free'}}>
                     <Card.Body>
                         <Card.Title> <b> TASK </b> </Card.Title>
                         {todo.item}
                         <br />
-                        <button onClick = {() => this.removeElement(todo.item)} style = {{padding: 5 + 'px', backgroundColor: '#F2B057', fontSize: 12 + 'px', fontFamily: 'Ink Free'}}> Remove Task </button>
+                        <button onClick = {() => this.removeElement(todo)} style = {{padding: 5 + 'px', backgroundColor: '#F2B057', fontSize: 12 + 'px', fontFamily: 'Ink Free'}}> Remove Task </button>
                     </Card.Body>
                     </Card>
                   </li>;
@@ -106,11 +106,12 @@ class Container2 extends React.Component {
             </ul>
         )       
 
-    removeElement = (task) => {
+    removeElement = (todo) => {
         this.db
         .collection("item")
-        .deleteOne({item: task})
-        .then(this.displayTodos).catch(console.error)
+        .deleteOne({"_id": todo._id})
+        .then(this.displayTodos)
+        .catch((error) => console.log(error))
     }
 
     render() {
