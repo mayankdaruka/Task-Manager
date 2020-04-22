@@ -22,7 +22,7 @@ class Container2 extends React.Component {
         this.handleChangeDate = this.handleChangeDate.bind(this)
         this.handleChangeImportance = this.handleChangeImportance.bind(this)
         this.handleChangeTask = this.handleChangeTask.bind(this)
-        this.removeElement = this.removeElement.bind(this)
+        // this.removeElement = this.removeElement.bind(this)
         this.handleTasks = this.handleTasks.bind(this)
         this.state = {
             task1: '',
@@ -32,7 +32,6 @@ class Container2 extends React.Component {
             array:[]
         }
     }
-
     
     componentDidMount() {
         this.db = this.client.getServiceClient(RemoteMongoClient.factory, 'taskManagerCluster0').db('todos');
@@ -106,7 +105,8 @@ class Container2 extends React.Component {
             </ul>
         )       
 
-    removeElement = (todo) => {
+    removeElement(todo) {
+        console.log(todo._id)
         this.db
         .collection("item")
         .deleteOne({"_id": todo._id})
